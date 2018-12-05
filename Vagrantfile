@@ -76,7 +76,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb.list
     sudo apt-get update
     sudo apt-get install mongodb-org --force-yes -y
-
     #sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/conveyour
     #sudo apt-get install -y mongodb-org=3.2.0 mongodb-org-server=3.2.0 mongodb-org-shell=3.2.0 mongodb-org-mongos=3.2.0 mongodb-org-tools=3.2.0
     #sudo apt-get install python-software-properties -y
