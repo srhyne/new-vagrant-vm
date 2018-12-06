@@ -1,0 +1,45 @@
+Correct versions of software installed
+- PHP 5.5.9
+- Mongo  v3.2.21
+- Mysql  5.5.62
+- Nginx  1.4.6
+
+Composer installed
+and running.
+
+-
+Set NGINX Config.
+
+Seed Database
+-
+
+
+
+nginx config
+
+
+
+
+
+
+
+
+
+VAR = "server {\
+	listen 80;\
+  root /var/sites/conveyour.dev/public;\
+	index index.php index.html index.htm;\
+	server_name localhost;\
+	location / {\
+		try_files $uri $uri/ =404;\
+	}\
+  location /min/ {\
+      rewrite ^/min/([bfg]=.+) /min/index.php?$1;\
+  }\
+	location ~ \.php$ {\
+		fastcgi_split_path_info ^(.+\.php)(/.+)$;\
+		fastcgi_pass unix:/var/run/php5-fpm.sock;\
+		fastcgi_index index.php;\
+		include fastcgi_params;\
+	}\
+}\
