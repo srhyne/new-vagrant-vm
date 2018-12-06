@@ -2,7 +2,7 @@ server {
 	listen 80;
 	root /var/sites/conveyour.dev/public;
 	index index.php index.html index.htm;
-	server_name conveyour.dev conveyour.test;
+	server_name conveyour.dev conveyour.test conveyour.site;
 	location / {
 	 try_files $uri $uri/ /index.php?$query_string;
 	}

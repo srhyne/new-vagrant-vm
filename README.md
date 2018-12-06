@@ -26,3 +26,4 @@ Set up domain mapping
 in your local sudo nano /etc/hosts.
 192.168.88.33 conveyour.dev
 192.168.88.33 conveyour.test
+192.168.88.33 conveyour.site

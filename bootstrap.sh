@@ -1,8 +1,6 @@
 apt-get update -y
 apt-get install -y nginx
 
-
-
 sudo apt-get install php5 -y
 sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password password password'
 sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_again password password'
@@ -47,6 +45,12 @@ mysql -uroot -ppassword -e "CREATE DATABASE homestead;"
 sed -i 's/DB_USERNAME=homestead/DB_USERNAME=root/g' .env
 sed -i 's/DB_PASSWORD=secret/DB_PASSWORD=password/g' .env
 
+#Set NGINX Config
+cd /etc/nginx/sites-enabled/
+wget https://raw.githubusercontent.com/Chr15t1an/new-vagrant-vm/master/nginxconf/conveyour.dev
+sudo service nginx reload
+
+# cd /etc/nginx/sites-enabled/
 
 
 
