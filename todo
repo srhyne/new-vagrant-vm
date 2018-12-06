@@ -1,15 +1,5 @@
-Correct versions of software installed
-- PHP 5.5.9
-- Mongo  v3.2.21
-- Mysql  5.5.62
-- Nginx  1.4.6
-
-Composer installed
-and running.
-
 -
-Set NGINX Config.
+Include php Parce errors. 
 Seed Database
+Get Application to work
 -
-
-nginx config
